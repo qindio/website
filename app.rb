@@ -6,6 +6,13 @@ SUBDOMAIN     = ENV['MAILGUN_SUBDOMAIN']
 API_URL       = "https://api:#{API_KEY}@api.mailgun.net/v2/#{SUBDOMAIN}"
 QINDIO_INBOX  = "hello@qindio.com"
 
+before do
+   content_type :json    
+   headers 'Access-Control-Allow-Origin' => '*', 
+    'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST']  
+end
+
+set :protection, false
 
 post '/messages' do
   name    = params['name']
