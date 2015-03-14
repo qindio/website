@@ -26,12 +26,12 @@ $(document).ready(function(){
   	$.ajax(form.attr("action"), {
   		type: form.attr("method"),
   		data: form.serialize(),
+  		dataType: 'json',
   		success: function(response) {
-        console.log('in success!');
-  			form.find(".showMessage").fadeToggle(500);
+  			form.closest('.contact-form').find(".showMessage").fadeToggle(500);
   			
   			form.delay(3000).queue(function(){
-					form.find(".showMessage").fadeToggle(400);
+					form.closest(".contact-form").find(".showMessage").fadeToggle(400);
 					form.dequeue();
 				});
 			
