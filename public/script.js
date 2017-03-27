@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	function showMenu () {
 		$(".dropdown-menu").fadeToggle(250);
+    $(".dropdown-menu").toggleClass("hidden");
 	}
 
 
@@ -49,8 +50,10 @@ $(document).ready(function(){
   $(".dropdown-menu").on("click", showMenu);
 
   /* Show services info - Services section */
-  $(".teaser").on("mouseenter", showInfo);
-  $(".teaser").on("mouseleave",showInfo);
+/*  $(".teaser").on("mouseenter", showInfo);
+  $(".teaser").on("mouseleave",showInfo);*/
+  $(".teaser").on("click", showInfo);
+
 
 
 });
