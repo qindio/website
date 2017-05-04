@@ -2,9 +2,10 @@ $(document).ready(function(){
 
 	/* Show dropdown menu */
 
-	function showMenu () {
-		$(".dropdown-menu").fadeToggle(250);
-    $(".dropdown-menu").toggleClass("hidden");
+	function showMenu (e) {
+    e.stopPropagation();
+		$(".dropdown-menu").fadeToggle(200);
+    /*$(".dropdown-menu").toggleClass("hidden");*/
 	}
 
 
@@ -13,7 +14,7 @@ $(document).ready(function(){
 	function showInfo (e) {
    	e.stopPropagation();
    	e.preventDefault();
-   	$(this).find(".services-info").fadeToggle(400);
+   	$(this).find(".services-info").fadeToggle(400); 
    	$(this).find(".applyTeaser").toggleClass("transparency");
    }
 
