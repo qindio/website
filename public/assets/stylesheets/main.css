@@ -335,10 +335,11 @@ ol, ul {
 
 .banner-section h1 {
   margin-bottom: 1em;
-  font-family: 'Pacifico', cursive;
+  font-family: "Ubuntu", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
   font-size: 8vw; /* 8% of viewport width */
   color: #eee;
-  text-shadow: 2px 2px 5px #333;
+  text-shadow: 1px 1px 0px rgba(102, 102, 102, 0.87), 3px 3px 0px rgba(179, 179, 179, 0.5);
 }
 
 /*
@@ -372,12 +373,13 @@ ol, ul {
 }
 
 /*
-  ==================================
-  Main content - Section - Services
-  ==================================
+  =================================================
+  Main content - Section - Services & Our Approach
+  =================================================
 */
 
-.services-section {
+.services-section, 
+.approach-section {
   background-color: #FBFBFB;
 }
 
@@ -394,14 +396,16 @@ ol, ul {
   flex: 0 100%;
 }
 
-.teaser {
+.teaser,
+.teaser-approach {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.teaser > * {
+.teaser > *,
+.teaser-approach > * {
   -webkit-flex: 1 100%; 
   flex: 1 100%;
 }
@@ -411,13 +415,15 @@ ol, ul {
   flex: 1 100%;
 }
 
-.teaser img {
+.teaser img,
+.teaser-approach img {
   margin-bottom: 2.3%; 
   width: 40vw; /* 40% of viewport width */
   opacity: 1;
 }
 
-.teaser a {
+.teaser a,
+.teaser-approach a {
   padding: 1em;
   -webkit-transition: all .14s;
    -moz-transition: all .14s;
@@ -425,7 +431,8 @@ ol, ul {
         transition: all .14s;
 }
 
-.teaser h3 {
+.teaser h3 
+.teaser-approach h3{
   font-size: 3.2vw; 
   color: #b3b3b3;
   text-shadow: 1px 1px 0px #fff, 1.5px 1.5px 0px rgba(0, 0, 0, 0.15);
@@ -433,11 +440,13 @@ ol, ul {
 
 /* Display with jQuery*/
 
-.div-services-info{
+.div-services-info, 
+.div-approach-info {
   position: relative;
 }
 
-.services-info {
+.services-info,
+.approach-info {
   display: none;
   /*p, to place this element we need apply position and top*/
   position: absolute;
@@ -822,6 +831,11 @@ textarea: -ms-input-placeholder {
   left: 1em;
 }
 
+.contact .mail {
+  color: #36d7b7;
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /*
   ==============================
  Footer - style
@@ -951,15 +965,18 @@ Video
     font-size: 1.4em;
   }
 
-  /* Services section */
-  .teaser img {
+  /* Services section & Approach section */
+  .teaser img,
+  .teaser-approach img {
     width: 35vw;
   }
-  .teaser h3 {
+  .teaser h3,
+  .teaser-approach h3 {
     font-size: 1.4em;
   }
 
-  .services-info {
+  .services-info,
+  .approach-info {
     top: -150px;
     font-size: 1.6em; 
   }
@@ -1007,12 +1024,13 @@ Video
     font-size: 3em; 
   }
 
-  /* Services section */
+  /* Services section & Approach section */
   .teaser-all > * {
     -webkit-flex: 0 calc(50% - 3%); /*padding left: 1.5%; padding right: 1.5%*/
     flex: 0 calc(50% - 3%); /*padding left: 1.5%; padding right: 1.5%*/
   }
-  .teaser img {
+  .teaser img,
+  .teaser-approach img {
     width: 30vw;
   }
 
@@ -1072,12 +1090,13 @@ Video
     width: 30em;
   }
 
-  /* Services section */
+  /* Services section & Approach section */
   .teaser-all > * {
     -webkit-flex: 0 calc(33% - 3%);
     flex: 0 calc(33% - 3%);
   }
-  .teaser img {
+  .teaser img,
+  .teaser-approach img {
     width: 100vw;
   }
 
