@@ -14,11 +14,17 @@ $(document).ready(function(){
 	function showInfo (e) {
    	e.stopPropagation();
    	e.preventDefault();
-   	$(this).find(".services-info").fadeToggle(400); 
-   	$(this).find(".applyTeaser").toggleClass("transparency");
-   }
 
-
+    if ($(this).find(".services-info").length) {
+      $(this).find(".services-info").fadeToggle(400);
+      $(this).find(".applyTeaser").toggleClass("transparency");
+    }
+    else if ($(this).find(".approach-info").length) {
+      $(this).find(".approach-info").fadeToggle(400);
+      $(this).find(".applyTeaser").toggleClass("transparency");
+    }
+  }
+  
   /* Ajax - show after submitting info */
   $("form").on("submit", function(event) {
   	event.stopPropagation();
@@ -54,7 +60,7 @@ $(document).ready(function(){
 /*  $(".teaser").on("mouseenter", showInfo);
   $(".teaser").on("mouseleave",showInfo);*/
   $(".teaser").on("click", showInfo);
-
+  $(".teaser-approach").on("click", showInfo);
 
 
 });
