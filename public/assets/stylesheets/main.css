@@ -897,7 +897,35 @@ textarea: -ms-input-placeholder {
 }
 
 
-/*========================================
+
+/*
+  ==================================
+  Main content - Section - Credits
+  ==================================
+*/
+
+.credits-section {
+  background-color: #212020;
+  font-size: 1.5vw; 
+}
+
+.credits-section .container {
+   padding: 1% 2%;
+}
+
+.credits-section a {
+  color: #b3adad;
+}
+
+.credits-section p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: #fff;
+}
+
+
+/*
+========================================
 Video
 ========================================
 */
@@ -1017,6 +1045,12 @@ Video
     -webkit-flex: 0 50%;
     flex: 0 50%;
   }
+
+  /* Credits */
+  .credits-section {
+    font-size: 0.9em; 
+  }
+
 }
 
 @media all and (min-width: 650px) {
