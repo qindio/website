@@ -2,9 +2,10 @@ $(document).ready(function(){
 
 	/* Show dropdown menu */
 
-	function showMenu () {
-		$(".dropdown-menu").fadeToggle(250);
-    $(".dropdown-menu").toggleClass("hidden");
+	function showMenu (e) {
+    e.stopPropagation();
+		$(".dropdown-menu").fadeToggle(200);
+    /*$(".dropdown-menu").toggleClass("hidden");*/
 	}
 
 
@@ -13,6 +14,7 @@ $(document).ready(function(){
 	function showInfo (e) {
    	e.stopPropagation();
    	e.preventDefault();
+
     if ($(this).find(".services-info").length) {
       $(this).find(".services-info").fadeToggle(400);
       $(this).find(".applyTeaser").toggleClass("transparency");
@@ -22,7 +24,7 @@ $(document).ready(function(){
       $(this).find(".applyTeaser").toggleClass("transparency");
     }
   }
-
+  
   /* Ajax - show after submitting info */
   $("form").on("submit", function(event) {
   	event.stopPropagation();
