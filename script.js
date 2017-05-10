@@ -18,10 +18,12 @@ $(document).ready(function(){
     if ($(this).find(".services-info").length) {
       $(this).find(".services-info").fadeToggle(400);
       $(this).find(".applyTeaser").toggleClass("transparency");
+      $(this).find("h3").toggleClass("transparency");
     }
     else if ($(this).find(".approach-info").length) {
       $(this).find(".approach-info").fadeToggle(400);
       $(this).find(".applyTeaser").toggleClass("transparency");
+      $(this).find("h3").toggleClass("transparency");
     }
   }
   
