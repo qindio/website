@@ -30,7 +30,15 @@
   </head> 
 
   <body>
-    <div data-vide-bg="assets/video/background" id="wrapper-video"></div>
+    <!-- <div data-vide-bg="assets/video/background" id="wrapper-video"></div> -->
+    <div class="background-video">
+      <video autoplay loop id="wrapper-video" >
+        <source src="assets/video/background.mp4" type='video/mp4;' />
+        <source src="assets/video/background.webm" type='video/webm;' />
+        <source src="assets/video/background.ogv" type='video/ogg;' />
+      </video>
+    </div>
+
     <!-- Header -->
     <header>
       <section class="navbar-fixed">
@@ -323,7 +331,9 @@
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
       <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
       <script src="script.js"></script>
+      <!--
       <script src="jquery.vide.min.js"></script>
+      -->
   </body>
 
 </html>
