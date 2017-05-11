@@ -934,13 +934,27 @@ textarea: -ms-input-placeholder {
 Video
 ========================================
 */
+video {
+  display: block;
+}
 
 #wrapper-video {
   position: fixed;
-  width: 100vw;
-  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  /*min-height: 100%;*/
+  width: auto;
+  height: auto;
   opacity: .95;
   z-index: -1000;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(/assets/video/background.gif) center center no-repeat fixed;
+  background-size: cover;
+  overflow: hidden;
 }
 /*
   ==============================
@@ -949,6 +963,10 @@ Video
 */
 
 @media all and (min-width: 500px) {
+  /* Video */
+  #wrapper-video {
+    background: url(/assets/video/background-small.gif) center center no-repeat fixed;
+  }
   /* Header */
   .flat-logo {
     font-size: 3.2em;
@@ -1060,6 +1078,10 @@ Video
 }
 
 @media all and (min-width: 650px) {
+    /* Video */
+    #wrapper-video {
+      background: url(/assets/video/background-medium.gif) center center no-repeat fixed;
+    }
 
   /* Services section & Approach section */
   .teaser-all > * {
@@ -1108,6 +1130,10 @@ Video
 }
 
 @media all and (min-width: 750px) {
+  /* Video */
+  #wrapper-video {
+    background: url(/assets/video/background-big.gif) center center no-repeat fixed;
+  }
   /*Header*/
   .dropdown-button {
     display: none;
