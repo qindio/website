@@ -28,31 +28,31 @@ $(document).ready(function(){
   }
   
   /* Ajax - show after submitting info */
-  $("form").on("submit", function(event) {
+  $("form").on("submit", submitForm);
+
+  function submitForm(event) {
   	event.stopPropagation();
   	event.preventDefault();
   	var form = $(this);
+    var data = form.serialize();
+
+    form.find("input[type='text']").val("");
+    form.find("input[type='email']").val("");
+    form.find("textarea").val("");
+
+    form.find(".showMessage").fadeToggle(500);
+    form.delay(3000).queue(function(){
+      form.find(".showMessage").fadeToggle(5000);
+      form.dequeue();
+    });
 
   	$.ajax(form.attr("action"), {
   		type: form.attr("method"),
-  		data: form.serialize(),
+  		data: data,
   		success: function(response) {
-  			form.find('.contact-form').find(".showMessage").fadeToggle(500);
-  			
-  			form.delay(3000).queue(function(){
-					form.find(".contact-form").find(".showMessage").fadeToggle(400);
-					form.dequeue();
-				});
-			
-			document.getElementById("myForm").val(""); 
-
   		}
   	});
-  });
-
-
-
-
+  }
 
   /* Show navigation menu - Header nav section */
   $(".dropdown-button").on("click", showMenu);
