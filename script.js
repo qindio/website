@@ -44,7 +44,7 @@ $(document).ready(function(){
 					form.dequeue();
 				});
 			
-			document.getElementById("myForm").reset(); 
+			document.getElementById("myForm").val(""); 
 
   		}
   	});
