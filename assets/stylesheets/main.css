@@ -137,7 +137,7 @@ img {
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 1px 1px 0px #fff, 3px 3px 0px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 0px #fff, 2px 2px 0px rgba(0, 0, 0, 0.15);
 }
 
 /*
@@ -427,13 +427,13 @@ ol, ul {
 .teaser img,
 .teaser-approach img {
   margin-bottom: 2.3%; 
-  width: 40vw; /* 40% of viewport width */
+  width: 20vw; /* 20% of viewport width */
   opacity: 1;
 }
 
 .teaser a,
 .teaser-approach a {
-  padding: 1em;
+  padding: 3em;
   -webkit-transition: all .14s;
    -moz-transition: all .14s;
      -o-transition: all .14s;
@@ -1036,7 +1036,7 @@ Video
   /* Services section & Approach section */
   .teaser img,
   .teaser-approach img {
-    width: 35vw;
+    width: 15vw;
   }
   .teaser h3,
   .teaser-approach h3 {
@@ -1100,10 +1100,6 @@ Video
     flex: 0 calc(50% - 3%); /*padding left: 1.5%; padding right: 1.5%*/
     -webkit-align-items: flex-end; 
     align-items: flex-end; 
-  }
-  .teaser img,
-  .teaser-approach img {
-    width: 30vw;
   }
 
   /* Sentence section*/
@@ -1169,7 +1165,7 @@ Video
   }
   .teaser img,
   .teaser-approach img {
-    width: 100vw;
+    width: 10vw;
   }
 
   /* Sentence section*/
