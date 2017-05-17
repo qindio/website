@@ -2,28 +2,36 @@
 <html lan="en">
 
   <head>
+
     <meta charset="UTF-8">
     <title>Software for Smart Teams</title>
-    <meta name="description" content="Qindio creates intuitive, lean and amazing web applications to enhance your core business">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
-    <meta name="keywords" content="develop web applications, build web apps, python, ruby on rails, bigdata, analytical, web applications, development, coding, programming">
-    <meta name="author" content="Qindio">
-
-    <!-- Open Graph data-->
-
     <meta property="og:title" content="Creating lean and amazing web applications for your business - Qindio"> 
     <meta property="og:description" content="Qindio creates intuitive, lean and amazing web applications to enhance your core business."> 
     <meta property="og:type" content="website"> 
     <meta property="og:url" content="/"> <link rel="canonical" href="https://qindio.com/"> 
+    <meta name="description" content="Qindio creates intuitive, lean and amazing web applications to enhance your core business">
+    <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
+    <meta name="keywords" content="develop web applications, build web apps, python, ruby on rails, bigdata, analytical, web applications, development, coding, programming">
+    <meta name="author" content="Qindio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--  -->
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/stylesheets/normalize.css">
+    <link rel="preload" as="style" href="assets/stylesheets/main-load-first.css" onload="this.rel='stylesheet'">
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700">
+    <link rel="preload" as="image" href="assets/video/background.gif">
 
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="preload" as="image" href="assets/images/flatLogo.svg">
+
+    <link rel="preload" as="style" href="assets/font-awesome/css/font-awesome.min.css" onload="this.rel='stylesheet'">
+
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/normalize.css"> 
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu:700">
+
+
+ 
 
     <!-- Header -->
     <header>
@@ -328,7 +336,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
       </script>
 
-      <script src="script.js"></script>
+      <script async src="script.js"></script>
   </body>
 
 </html>
